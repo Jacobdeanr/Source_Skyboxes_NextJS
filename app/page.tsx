@@ -27,7 +27,7 @@ export default function Home() {
       {slugs.map((slug) => (
         <Image
           key={slug}
-          src={`/skyboxes/${slug}/images/thumb.webp`}
+          src={`/Source_Skyboxes_NextJS/skyboxes/${slug}/images/thumb.webp`}
           alt={`${slug} thumbnail`}
           width={400}
           height={225}

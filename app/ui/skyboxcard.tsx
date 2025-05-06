@@ -44,15 +44,16 @@ type Props = {
             <div
                 className="
                     absolute inset-x-0 bottom-0
-                    translate-y-full
-                    group-hover:translate-y-0
-                    group-hover:opacity-100
-                    opacity-0
-                    bg-black/60
+                    translate-y-0 opacity-100
+                    md:translate-y-full
+                    md:opacity-0
+                    md:group-hover:translate-y-0
+                    md:group-hover:opacity-100
+                    bg-black/60 backdrop-blur-xs
                     px-3 py-2
                     transition duration-150
                 "
-    >
+                >
                 <h2 className="text-sm font-semibold text-neutral-100 truncate">
                     {slug}
                 </h2>

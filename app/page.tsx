@@ -27,7 +27,7 @@ function getSkyboxSlugs(): string[] {
             mb-4
           "
         >
-        <h1 className="text-2xl sm:text-4xl font-bold text-neutral-100 tracking-wide text-center text-nowrap">
+        <h1 className="text-1xl sm:text-4xl font-bold text-neutral-100 tracking-wide text-center text-nowrap">
           Jacob Robbins&rsquo; Skybox Textures
         </h1>
       </header>

@@ -27,7 +27,7 @@ function getSkyboxSlugs(): string[] {
             mb-4
           "
         >
-        <h1 className="text-2xl sm:text-4xl font-bold text-neutral-100 tracking-wide">
+        <h1 className="text-2xl sm:text-4xl font-bold text-neutral-100 tracking-wide text-center text-nowrap">
           Jacob Robbins&rsquo; Skybox Textures
         </h1>
       </header>
@@ -35,8 +35,11 @@ function getSkyboxSlugs(): string[] {
       <section
         className="
           grid gap-4
-          grid-cols-[repeat(auto-fill,minmax(24rem,1fr))]
-          px-4 sm:px-6 lg:px-8     /* side padding that expands with breakpoints */
+          grid-cols-[repeat(auto-fill,minmax(16rem,1fr))]
+          sm:grid-cols-[repeat(auto-fill,minmax(18rem,1fr))]
+          lg:grid-cols-[repeat(auto-fill,minmax(22rem,1fr))]
+          2xl:grid-cols-[repeat(auto-fill,minmax(26rem,1fr))]
+          px-4 sm:px-6 lg:px-8
         "
       >
         {slugs.map((slug) => (

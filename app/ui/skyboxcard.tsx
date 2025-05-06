@@ -9,6 +9,8 @@ type Props = {
     const imgBase   = `/Source_Skyboxes_NextJS/skyboxes/${slug}/images`;
     const details   = `/${slug}`;
 
+    const thumbnail = `${imgBase}/thumbnail.webp`;
+
     //placeholder
     const description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
   
@@ -16,35 +18,44 @@ type Props = {
     <Link href={details}>
         <article
             className="
-            flex flex-col items-center
-            bg-neutral-800
-            ring-1 ring-neutral-700/60
-            shadow-lg shadow-black/40
-            p-2
-            m-0.5
-            tranform hover:scale-105
-            transition duration-150
-            
-        ">
-            <div className='w-full text-center font-bold'>
-                <h2 className="text-lg font-semibold text-left">{slug}</h2>
-            </div>
-            
-            <div className="relative w-full aspect-[16/9] overflow-hidden m-2">
-                <Image
-                    src={`${imgBase}/thumbnail.webp`}
-                    alt={`${slug} preview`}
-                    fill
-                    sizes="(min-width:1280px) 16rem,
-                    (min-width:1024px) 22vw,
-                    (min-width:640px) 45vw,
-                    100vw"
-                    className="object-cover"
-                    unoptimized
-                />
-            </div>  
-            <div className='w-full h-auto'>
-                <h3 className="text-sm">{description}</h3>
+                group
+                relative flex flex-col items-center
+                bg-neutral-800 ring-1 ring-neutral-700/60
+                shadow-lg shadow-black/40
+                transition duration-150 hover:scale-105
+                overflow-hidden
+                aspect-[16/9]
+            "
+            style={{
+                backgroundImage: `url(${thumbnail})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+            }}
+            >
+                
+            {/* Visually hidden image for SEO/alt text */}
+            <Image
+                src={thumbnail}
+                alt={`${slug} preview`}
+                fill
+                className="opacity-0"
+                unoptimized
+            />
+            <div
+                className="
+                    absolute inset-x-0 bottom-0
+                    translate-y-full
+                    group-hover:translate-y-0
+                    group-hover:opacity-100
+                    opacity-0
+                    bg-black/60
+                    px-3 py-2
+                    transition duration-150
+                "
+    >
+                <h2 className="text-sm font-semibold text-neutral-100 truncate">
+                    {slug}
+                </h2>
             </div>
         </article>
     </Link>

@@ -1,6 +1,6 @@
 import fs   from 'fs';
 import path from 'path';
-import Image from 'next/image';
+import SkyboxCard from './ui/skyboxcard';
 
 function getSkyboxSlugs(): string[] {
   const skyboxesDir = path.join(process.cwd(), 'public', 'skyboxes');
@@ -11,29 +11,39 @@ function getSkyboxSlugs(): string[] {
     .filter((name) =>
       fs.statSync(path.join(skyboxesDir, name)).isDirectory()
     );
-}
+  }
 
-export default function Home() {
-  const slugs = getSkyboxSlugs();
+  export default function Home() {
+    const slugs = getSkyboxSlugs();
 
-  return (
-    <main>
-      <div className='Header'>
-        <h1>
-          Jacob Robbins' Skyboxes
+    return (
+      <main>
+        <header
+          className="
+            flex items-center justify-center
+            bg-neutral-900
+            shadow-md shadow-black/40
+            h-20
+            mb-4
+          "
+        >
+        <h1 className="text-2xl sm:text-4xl font-bold text-neutral-100 tracking-wide">
+          Jacob Robbins&rsquo; Skybox Textures
         </h1>
-      </div>
-      <div className="grid">
-      {slugs.map((slug) => (
-        <Image
-          key={slug}
-          src={`/Source_Skyboxes_NextJS/skyboxes/${slug}/images/thumb.webp`}
-          alt={`${slug} thumbnail`}
-          width={400}
-          height={225}
-        />
-      ))}
-      </div>
-    </main>
-  );
-}
+      </header>
+
+      <section
+        className="
+          grid gap-4
+          grid-cols-[repeat(auto-fill,minmax(24rem,1fr))]
+          px-4 sm:px-6 lg:px-8     /* side padding that expands with breakpoints */
+        "
+      >
+        {slugs.map((slug) => (
+          <SkyboxCard key={slug} slug={slug} />
+        ))}
+      </section>
+
+      </main>
+    );
+  }

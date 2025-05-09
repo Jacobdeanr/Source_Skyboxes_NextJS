@@ -1,0 +1,32 @@
+{
+  "author": "Jacob Robbins",
+  "description": "",
+  "publishDate": "2014-09-12",
+  "license": "CC BY 4.0",
+  "categories": [
+    "Afternoon",
+    "Cloudy"
+  ],
+  "steamMaps": [
+    {
+      "name": "Neutron",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=485441486"
+    }
+  ],
+  "sunParameters": {
+    "sunAngle": "0 80 0",
+    "pitch": "-50",
+    "brightness": [
+      255,
+      249,
+      240,
+      500
+    ],
+    "ambience": [
+      103,
+      139,
+      175,
+      200
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "author": "Jacob Robbins",
+  "description": "",
+  "publishDate": "2013-11-25",
+  "license": "CC BY 4.0",
+  "categories": [
+    "Night",
+    "Overcast"
+  ],
+  "steamMaps": [
+    {
+      "name": "jb_frostbite",
+      "url": "https://store.steampowered.com/app/869480/Jabroni_Brawl_Episode_3/"
+    },
+    {
+      "name": "NO RETURN",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2903782675"
+    },
+    {
+      "name": "nmo_blizzard",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3476632680"
+    }
+  ],
+  "sunParameters": {
+    "sunAngle": "0 125 0",
+    "pitch": "-56",
+    "brightness": [
+      116,
+      131,
+      162,
+      100
+    ],
+    "ambience": [
+      70,
+      84,
+      104,
+      25
+    ]
+  }
+}

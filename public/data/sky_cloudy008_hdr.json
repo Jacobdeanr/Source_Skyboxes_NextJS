@@ -1,0 +1,26 @@
+{
+  "author": "Jacob Robbins",
+  "description": "",
+  "publishDate": "2014-04-27",
+  "license": "CC BY 4.0",
+  "categories": [
+    "Afternoon",
+    "Cloudy"
+  ],
+  "sunParameters": {
+    "sunAngle": "0 85 0",
+    "pitch": "-56",
+    "brightness": [
+      210,
+      223,
+      232,
+      400
+    ],
+    "ambience": [
+      70,
+      84,
+      104,
+      200
+    ]
+  }
+}

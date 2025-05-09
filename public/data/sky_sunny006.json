@@ -1,0 +1,44 @@
+{
+  "author": "Jacob Robbins",
+  "description": "",
+  "publishDate": "2016-01-27",
+  "license": "CC BY 4.0",
+  "categories": [
+    "Morning",
+    "Clear"
+  ],
+  "steamMaps": [
+    {
+      "name": "Natalyas Cottage",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2987012820"
+    }
+  ],
+  "sunParameters": {
+    "sunAngle": "0 -8 0",
+    "pitch": "-40",
+    "brightness": [
+      254,
+      235,
+      214,
+      600
+    ],
+    "ambience": [
+      74,
+      129,
+      162,
+      300
+    ]
+  },
+  "fogParameters": {
+    "primaryFogColor": [
+      243,
+      240,
+      214
+    ],
+    "secondaryFogColor": [
+      243,
+      240,
+      214
+    ]
+  }
+}

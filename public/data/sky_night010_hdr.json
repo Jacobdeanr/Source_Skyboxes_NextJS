@@ -1,0 +1,39 @@
+{
+  "author": "Jacob Robbins",
+  "description": "",
+  "publishDate": "2024-08-23",
+  "license": "CC BY 4.0",
+  "categories": [
+    "Night",
+    "Clear"
+  ],
+  "steamMaps": [
+    {
+      "name": "Skywatching",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3359381654"
+    }
+  ],
+  "sunParameters": {
+    "sunAngle": "0 199 0",
+    "pitch": "-37",
+    "brightness": [
+      238,
+      231,
+      213,
+      15
+    ],
+    "ambience": [
+      54,
+      61,
+      65,
+      10
+    ]
+  },
+  "fogParameters": {
+    "primaryFogColor": [
+      5,
+      5,
+      5
+    ]
+  }
+}

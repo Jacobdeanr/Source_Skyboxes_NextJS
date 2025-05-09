@@ -1,0 +1,40 @@
+{
+  "author": "Jacob Robbins",
+  "description": "",
+  "publishDate": "2024-08-09",
+  "license": "CC BY 4.0",
+  "categories": [
+    "Morning",
+    "Evening",
+    "Clear"
+  ],
+  "steamMaps": [
+    {
+      "name": "Lights (Mostly) Out",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3313845264"
+    }
+  ],
+  "sunParameters": {
+    "sunAngle": "0 237 0",
+    "pitch": "-6",
+    "brightness": [
+      253,
+      205,
+      157,
+      100
+    ],
+    "ambience": [
+      70,
+      84,
+      100,
+      50
+    ]
+  },
+  "fogParameters": {
+    "primaryFogColor": [
+      30,
+      40,
+      55
+    ]
+  }
+}

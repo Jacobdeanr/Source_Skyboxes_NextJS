@@ -1,0 +1,32 @@
+{
+  "author": "Jacob Robbins",
+  "description": "",
+  "publishDate": "2013-03-15",
+  "license": "CC BY 4.0",
+  "categories": [
+    "Afternoon",
+    "Cloudy"
+  ],
+  "steamMaps": [
+    {
+      "name": "Overgrown",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3098427828"
+    }
+  ],
+  "sunParameters": {
+    "sunAngle": "0 47 0",
+    "pitch": "-75",
+    "brightness": [
+      255,
+      237,
+      183,
+      600
+    ],
+    "ambience": [
+      120,
+      139,
+      160,
+      300
+    ]
+  }
+}

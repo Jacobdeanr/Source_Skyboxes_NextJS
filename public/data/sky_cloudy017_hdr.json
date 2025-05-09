@@ -1,0 +1,40 @@
+{
+  "author": "Jacob Robbins",
+  "description": "",
+  "publishDate": "2024-07-02",
+  "license": "CC BY 4.0",
+  "categories": [
+    "Morning",
+    "Afternoon",
+    "Cloudy"
+  ],
+  "steamMaps": [
+    {
+      "name": "BbiCOTKA Remastered",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3407479980"
+    }
+  ],
+  "sunParameters": {
+    "sunAngle": "0 116 0",
+    "pitch": "-50",
+    "brightness": [
+      255,
+      248,
+      232,
+      550
+    ],
+    "ambience": [
+      116,
+      154,
+      192,
+      300
+    ]
+  },
+  "fogParameters": {
+    "primaryFogColor": [
+      165,
+      190,
+      225
+    ]
+  }
+}

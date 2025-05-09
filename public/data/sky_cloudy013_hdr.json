@@ -1,0 +1,21 @@
+{
+  "author": "Jacob Robbins",
+  "description": "",
+  "publishDate": "2022-07-08",
+  "license": "CC BY 4.0",
+  "categories": [
+    "Afternoon",
+    "Cloudy",
+    "Overcast"
+  ],
+  "steamMaps": [
+    {
+      "name": "gm_southbeach_d",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2991458245"
+    },
+    {
+      "name": "zs_lens",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3212681027"
+    }
+  ]
+}

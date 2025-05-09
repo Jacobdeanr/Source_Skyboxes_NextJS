@@ -1,0 +1,33 @@
+{
+  "author": "Jacob Robbins",
+  "description": "",
+  "publishDate": "2022-07-26",
+  "license": "CC BY 4.0",
+  "categories": [
+    "Overcast",
+    "Cloudy"
+  ],
+  "sunParameters": {
+    "sunAngle": "0 251 0",
+    "pitch": "-8",
+    "brightness": [
+      196,
+      177,
+      135,
+      500
+    ],
+    "ambience": [
+      113,
+      124,
+      138,
+      200
+    ]
+  },
+  "fogParameters": {
+    "primaryFogColor": [
+      29,
+      34,
+      41
+    ]
+  }
+}

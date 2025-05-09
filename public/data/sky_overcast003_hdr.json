@@ -1,0 +1,39 @@
+{
+  "author": "Jacob Robbins",
+  "description": "",
+  "publishDate": "2013-10-20",
+  "license": "CC BY 4.0",
+  "categories": [
+    "Afternoon",
+    "Overcast",
+    "Cloudy"
+  ],
+  "sunParameters": {
+    "sunAngle": "0 93 0",
+    "pitch": "-50",
+    "brightness": [
+      210,
+      197,
+      176,
+      150
+    ],
+    "ambience": [
+      71,
+      86,
+      103,
+      30
+    ]
+  },
+  "fogParameters": {
+    "primaryFogColor": [
+      87,
+      106,
+      128
+    ],
+    "secondaryFogColor": [
+      87,
+      106,
+      128
+    ]
+  }
+}

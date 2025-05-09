@@ -1,0 +1,40 @@
+{
+  "author": "Jacob Robbins",
+  "description": "",
+  "publishDate": "2014-06-18",
+  "license": "CC BY 4.0",
+  "categories": [
+    "Afternoon",
+    "Cloudy"
+  ],
+  "steamMaps": [
+    {
+      "name": "jb_skyscratchers",
+      "url": "https://store.steampowered.com/app/869480/Jabroni_Brawl_Episode_3/"
+    },
+    {
+      "name": "rp_downtown_v4e_v1",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3314552010"
+    },
+    {
+      "name": "Christophsis Towers",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3331277550"
+    }
+  ],
+  "sunParameters": {
+    "sunAngle": "0 50 0",
+    "pitch": "-60",
+    "brightness": [
+      255,
+      252,
+      240,
+      500
+    ],
+    "ambience": [
+      148,
+      173,
+      195,
+      200
+    ]
+  }
+}

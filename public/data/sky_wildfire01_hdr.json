@@ -1,0 +1,43 @@
+{
+  "author": "Jacob Robbins",
+  "description": "",
+  "publishDate": "2024-08-11",
+  "license": "CC BY 4.0",
+  "categories": [
+    "Evening",
+    "Cloudy"
+  ],
+  "steamMaps": [
+    {
+      "name": "rp_dustvegas",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3152100416"
+    },
+    {
+      "name": "West London",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3129692021"
+    }
+  ],
+  "sunParameters": {
+    "sunAngle": "0 173 0",
+    "pitch": "-20",
+    "brightness": [
+      255,
+      173,
+      112,
+      400
+    ],
+    "ambience": [
+      152,
+      96,
+      80,
+      400
+    ]
+  },
+  "fogParameters": {
+    "primaryFogColor": [
+      172,
+      137,
+      132
+    ]
+  }
+}

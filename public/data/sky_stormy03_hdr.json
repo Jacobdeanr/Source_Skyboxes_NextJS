@@ -1,0 +1,44 @@
+{
+  "author": "Jacob Robbins",
+  "description": "",
+  "publishDate": "2024-05-21",
+  "license": "CC BY 4.0",
+  "categories": [
+    "Evening",
+    "Overcast",
+    "Cloudy"
+  ],
+  "steamMaps": [
+    {
+      "name": "Revival | City of Ash | Event Map",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3272379514"
+    },
+    {
+      "name": "zs_sawdust_v1",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3441411282"
+    }
+  ],
+  "sunParameters": {
+    "sunAngle": "0 -48 0",
+    "pitch": "-28",
+    "brightness": [
+      255,
+      248,
+      204,
+      400
+    ],
+    "ambience": [
+      133,
+      96,
+      71,
+      150
+    ]
+  },
+  "fogParameters": {
+    "primaryFogColor": [
+      80,
+      65,
+      56
+    ]
+  }
+}

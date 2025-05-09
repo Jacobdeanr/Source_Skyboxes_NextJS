@@ -1,0 +1,33 @@
+{
+  "author": "Jacob Robbins",
+  "description": "",
+  "publishDate": "2024-10-12",
+  "license": "CC BY 4.0",
+  "categories": [
+    "Night",
+    "Clear"
+  ],
+  "sunParameters": {
+    "sunAngle": "0 146 0",
+    "pitch": "-14",
+    "brightness": [
+      255,
+      255,
+      255,
+      300
+    ],
+    "ambience": [
+      61,
+      63,
+      67,
+      50
+    ]
+  },
+  "fogParameters": {
+    "primaryFogColor": [
+      205,
+      196,
+      186
+    ]
+  }
+}

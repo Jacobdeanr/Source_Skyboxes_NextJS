@@ -1,0 +1,40 @@
+{
+  "author": "Jacob Robbins",
+  "description": "",
+  "publishDate": "2013-10-13",
+  "license": "CC BY 4.0",
+  "categories": [
+    "Night",
+    "Hazy"
+  ],
+  "steamMaps": [
+    {
+      "name": "Darktown",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2537841802"
+    },
+    {
+      "name": "Clinic Remake",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2663561109"
+    },
+    {
+      "name": "The Snow Per Unit",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3452943377"
+    }
+  ],
+  "sunParameters": {
+    "sunAngle": "0 79 0",
+    "pitch": "-60",
+    "brightness": [
+      96,
+      116,
+      140,
+      50
+    ],
+    "ambience": [
+      62,
+      64,
+      74,
+      15
+    ]
+  }
+}

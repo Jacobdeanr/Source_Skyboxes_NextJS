@@ -1,0 +1,32 @@
+{
+  "author": "Jacob Robbins",
+  "description": "",
+  "publishDate": "2012-07-13",
+  "license": "CC BY 4.0",
+  "categories": [
+    "Night",
+    "Cloudy"
+  ],
+  "steamMaps": [
+    {
+      "name": "Relay Station",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3260478286"
+    }
+  ],
+  "sunParameters": {
+    "sunAngle": "0 79 0",
+    "pitch": "-45",
+    "brightness": [
+      206,
+      247,
+      255,
+      150
+    ],
+    "ambience": [
+      77,
+      96,
+      130,
+      50
+    ]
+  }
+}

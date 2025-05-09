@@ -1,0 +1,48 @@
+{
+  "author": "Jacob Robbins",
+  "description": "",
+  "publishDate": "2015-11-12",
+  "license": "CC BY 4.0",
+  "categories": [
+    "Night",
+    "Clear"
+  ],
+  "steamMaps": [
+    {
+      "name": "Black Mesa North",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3056456503"
+    },
+    {
+      "name": "jb_lich2",
+      "url": "https://store.steampowered.com/app/869480/Jabroni_Brawl_Episode_3/"
+    }
+  ],
+  "sunParameters": {
+    "sunAngle": "0 190 0",
+    "pitch": "-30",
+    "brightness": [
+      80,
+      124,
+      146,
+      250
+    ],
+    "ambience": [
+      56,
+      72,
+      92,
+      100
+    ]
+  },
+  "fogParameters": {
+    "primaryFogColor": [
+      27,
+      47,
+      70
+    ],
+    "secondaryFogColor": [
+      27,
+      47,
+      70
+    ]
+  }
+}

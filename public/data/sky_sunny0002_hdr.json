@@ -1,0 +1,20 @@
+{
+  "author": "Jacob Robbins",
+  "description": "",
+  "publishDate": "2012-06-22",
+  "license": "CC BY 4.0",
+  "categories": [
+    "Afternoon",
+    "Clear"
+  ],
+  "steamMaps": [
+    {
+      "name": "Flatsand",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=1707243677\\"
+    },
+    {
+      "name": "rp_downtown_v4e_v1",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3314552010"
+    }
+  ]
+}

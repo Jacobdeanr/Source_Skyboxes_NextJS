@@ -1,0 +1,36 @@
+{
+  "author": "Jacob Robbins",
+  "description": "",
+  "publishDate": "2012-08-14",
+  "license": "CC BY 4.0",
+  "categories": [
+    "Evening",
+    "Cloudy"
+  ],
+  "steamMaps": [
+    {
+      "name": "Winter Solstice",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=1944734598"
+    },
+    {
+      "name": "Olive Estate Remake",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2809640310"
+    }
+  ],
+  "sunParameters": {
+    "sunAngle": "0 260 0",
+    "pitch": "-20",
+    "brightness": [
+      253,
+      224,
+      206,
+      600
+    ],
+    "ambience": [
+      71,
+      96,
+      135,
+      350
+    ]
+  }
+}

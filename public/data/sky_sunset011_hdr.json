@@ -1,0 +1,38 @@
+{
+  "author": "Jacob Robbins",
+  "description": "",
+  "publishDate": "2025-05-08",
+  "license": "CC BY 4.0",
+  "categories": [
+    "Evening",
+    "Sunny"
+  ],
+  "sunParameters": {
+    "sunAngle": "0 330 0",
+    "pitch": "-5",
+    "brightness": [
+      253,
+      163,
+      96,
+      150
+    ],
+    "ambience": [
+      168,
+      179,
+      196,
+      60
+    ]
+  },
+  "fogParameters": {
+    "primaryFogColor": [
+      159,
+      114,
+      111
+    ],
+    "secondaryFogColor": [
+      99,
+      89,
+      99
+    ]
+  }
+}

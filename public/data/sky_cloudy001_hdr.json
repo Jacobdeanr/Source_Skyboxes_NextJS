@@ -1,0 +1,20 @@
+{
+  "author": "Jacob Robbins",
+  "description": "",
+  "publishDate": "2012-06-23",
+  "license": "CC BY 4.0",
+  "categories": [
+    "Afternoon",
+    "Cloudy"
+  ],
+  "steamMaps": [
+    {
+      "name": "Spruceville",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=1486408313"
+    },
+    {
+      "name": "gm_lcl",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3304889604"
+    }
+  ]
+}

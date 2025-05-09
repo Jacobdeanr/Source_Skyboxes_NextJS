@@ -1,0 +1,48 @@
+{
+  "author": "Jacob Robbins",
+  "description": "",
+  "publishDate": "2022-11-26",
+  "license": "CC BY 4.0",
+  "categories": [
+    "Evening",
+    "Cloudy"
+  ],
+  "steamMaps": [
+    {
+      "name": "Port Trajan",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3239363152"
+    },
+    {
+      "name": "TDM Postbellum",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3283190993"
+    }
+  ],
+  "sunParameters": {
+    "sunAngle": "0 154 0",
+    "pitch": "-15",
+    "brightness": [
+      251,
+      242,
+      234,
+      250
+    ],
+    "ambience": [
+      147,
+      164,
+      191,
+      200
+    ]
+  },
+  "fogParameters": {
+    "primaryFogColor": [
+      40,
+      51,
+      74
+    ],
+    "secondaryFogColor": [
+      40,
+      51,
+      74
+    ]
+  }
+}

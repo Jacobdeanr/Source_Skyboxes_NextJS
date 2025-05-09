@@ -1,0 +1,36 @@
+{
+  "author": "Jacob Robbins",
+  "description": "",
+  "publishDate": "2022-07-27",
+  "license": "CC BY 4.0",
+  "categories": [
+    "Overcast",
+    "Cloudy"
+  ],
+  "steamMaps": [
+    {
+      "name": "Section 9",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3254605188"
+    },
+    {
+      "name": "All Ghillied Up",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3081810080"
+    }
+  ],
+  "sunParameters": {
+    "sunAngle": "0 142 0",
+    "pitch": "-20",
+    "brightness": [
+      247,
+      247,
+      210,
+      500
+    ],
+    "ambience": [
+      123,
+      132,
+      129,
+      300
+    ]
+  }
+}

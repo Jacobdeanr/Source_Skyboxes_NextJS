@@ -1,0 +1,39 @@
+{
+  "author": "Jacob Robbins",
+  "description": "",
+  "publishDate": "2012-08-04",
+  "license": "CC BY 4.0",
+  "categories": [
+    "Morning",
+    "Clear"
+  ],
+  "steamMaps": [
+    {
+      "name": "Remnants",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2999037900"
+    }
+  ],
+  "sunParameters": {
+    "sunAngle": "0 256 0",
+    "pitch": "-30",
+    "brightness": [
+      255,
+      244,
+      221,
+      500
+    ],
+    "ambience": [
+      121,
+      152,
+      193,
+      350
+    ]
+  },
+  "fogParameters": {
+    "primaryFogColor": [
+      121,
+      152,
+      193
+    ]
+  }
+}

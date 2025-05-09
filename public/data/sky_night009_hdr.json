@@ -1,0 +1,39 @@
+{
+  "author": "Jacob Robbins",
+  "description": "",
+  "publishDate": "2024-07-03",
+  "license": "CC BY 4.0",
+  "categories": [
+    "Night",
+    "Clear"
+  ],
+  "steamMaps": [
+    {
+      "name": "Salt Pan",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3440784664"
+    }
+  ],
+  "sunParameters": {
+    "sunAngle": "0 171 0",
+    "pitch": "-2",
+    "brightness": [
+      216,
+      192,
+      177,
+      100
+    ],
+    "ambience": [
+      77,
+      96,
+      130,
+      200
+    ]
+  },
+  "fogParameters": {
+    "primaryFogColor": [
+      27,
+      41,
+      71
+    ]
+  }
+}

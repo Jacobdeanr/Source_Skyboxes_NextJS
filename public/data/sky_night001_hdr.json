@@ -1,0 +1,32 @@
+{
+  "author": "Jacob Robbins",
+  "description": "",
+  "publishDate": "2012-07-11",
+  "license": "CC BY 4.0",
+  "categories": [
+    "Night",
+    "Cloudy"
+  ],
+  "steamMaps": [
+    {
+      "name": "gm_akina",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=1583424746"
+    }
+  ],
+  "sunParameters": {
+    "sunAngle": "0 0 0",
+    "pitch": "-30",
+    "brightness": [
+      206,
+      247,
+      255,
+      100
+    ],
+    "ambience": [
+      77,
+      96,
+      130,
+      50
+    ]
+  }
+}

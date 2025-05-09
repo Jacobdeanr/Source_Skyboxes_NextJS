@@ -1,0 +1,39 @@
+{
+  "author": "Jacob Robbins",
+  "description": "",
+  "publishDate": "2016-01-27",
+  "license": "CC BY 4.0",
+  "categories": [
+    "Evening",
+    "Cloudy"
+  ],
+  "steamMaps": [
+    {
+      "name": "Vacant (MW19)",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3245626404"
+    }
+  ],
+  "sunParameters": {
+    "sunAngle": "0 36 0",
+    "pitch": "-25",
+    "brightness": [
+      254,
+      193,
+      133,
+      450
+    ],
+    "ambience": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "fogParameters": {
+    "primaryFogColor": [
+      255,
+      251,
+      164
+    ]
+  }
+}

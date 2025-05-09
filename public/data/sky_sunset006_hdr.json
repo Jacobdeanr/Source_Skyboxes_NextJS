@@ -1,0 +1,44 @@
+{
+  "author": "Jacob Robbins",
+  "description": "",
+  "publishDate": "2017-09-03",
+  "license": "CC BY 4.0",
+  "categories": [
+    "Evening",
+    "Cloudy"
+  ],
+  "steamMaps": [
+    {
+      "name": "Lonely Paradise",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3274095188"
+    }
+  ],
+  "sunParameters": {
+    "sunAngle": "0 -63 0",
+    "pitch": "-5",
+    "brightness": [
+      255,
+      147,
+      100,
+      100
+    ],
+    "ambience": [
+      11,
+      24,
+      55,
+      100
+    ]
+  },
+  "fogParameters": {
+    "primaryFogColor": [
+      20,
+      38,
+      84
+    ],
+    "secondaryFogColor": [
+      20,
+      38,
+      84
+    ]
+  }
+}

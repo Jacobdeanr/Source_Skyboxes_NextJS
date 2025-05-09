@@ -1,0 +1,32 @@
+{
+  "author": "Jacob Robbins",
+  "description": "",
+  "publishDate": "2012-07-03",
+  "license": "CC BY 4.0",
+  "categories": [
+    "Afternoon",
+    "Cloudy"
+  ],
+  "steamMaps": [
+    {
+      "name": "de_ali",
+      "url": "https://counterstrike.fandom.com/wiki/Ali"
+    }
+  ],
+  "sunParameters": {
+    "sunAngle": "0 30 0",
+    "pitch": "-65",
+    "brightness": [
+      254,
+      249,
+      218,
+      600
+    ],
+    "ambience": [
+      77,
+      96,
+      130,
+      400
+    ]
+  }
+}

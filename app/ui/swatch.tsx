@@ -14,7 +14,7 @@ export function Swatch({ rgb }: SwatchProps) {
       title={color}
     >
       <span
-        className="w-8 h-6 shrink-0"
+        className="w-8 self-stretch shrink-0"
         style={{ backgroundColor: color }}
       />
 

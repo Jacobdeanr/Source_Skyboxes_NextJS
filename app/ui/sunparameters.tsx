@@ -1,3 +1,6 @@
+import { Swatch } from "./swatch";
+import { ParamSection, ParamRow } from './parametersections';
+
 type Sun = {
     sunAngle?: string;
     pitch?: string | number;
@@ -5,53 +8,30 @@ type Sun = {
     ambience?: number[];
   };
 
-  function Swatch({ rgb }: { rgb: number[] }) {
-    const color = `rgb(${rgb.slice(0, 3).join(',')})`;
+  export default function SunParams(s: Sun) {
+    if (!s) return null;
+  
+    const { sunAngle, pitch, brightness, ambience } = s;
+  
+    if (!sunAngle && pitch === undefined && !brightness && !ambience) return null;
+  
     return (
-      <span
-        className="inline-block w-4 h-4 rounded-sm ring-1 ring-neutral-700/50 mr-1 align-middle"
-        style={{ backgroundColor: color }}
-        title={color}
-      />
+      <ParamSection title="Sun Parameters">
+        {sunAngle && <ParamRow label="Sun Angle">{sunAngle}</ParamRow>}
+  
+        {pitch !== undefined && <ParamRow label="Pitch">{pitch}</ParamRow>}
+  
+        {brightness && (
+          <ParamRow label="Brightness">
+            <Swatch rgb={brightness} />
+          </ParamRow>
+        )}
+  
+        {ambience && (
+          <ParamRow label="Ambient">
+            <Swatch rgb={ambience} />
+          </ParamRow>
+        )}
+      </ParamSection>
     );
   }
-  
-  
-export default function SunParams(s: Sun) {
-  if (!s || (!s.sunAngle && !s.pitch && !s.brightness && !s.ambience)) return null;
-
-  return (
-    <div className="text-sm text-neutral-400">
-      <h3 className="font-semibold mb-1">Sun Parameters</h3>
-      <ul className="list-inside space-y-0.5">
-        {s.sunAngle && (
-          <li>
-            <span className="font-semibold">Sun Angle:</span> {s.sunAngle}
-          </li>
-        )}
-
-        {s.pitch !== undefined && (
-          <li>
-            <span className="font-semibold">Pitch:</span> {s.pitch}
-          </li>
-        )}
-
-        {s.brightness?.length && (
-          <li className="flex items-center">
-            <span className="font-semibold mr-1">Brightness:</span>
-            <Swatch rgb={s.brightness} />
-            {s.brightness.join(' ')}
-          </li>
-        )}
-
-        {s.ambience?.length && (
-          <li className="flex items-center">
-            <span className="font-semibold mr-1">Ambient:</span>
-            <Swatch rgb={s.ambience} />
-            {s.ambience.join(' ')}
-          </li>
-        )}
-      </ul>
-    </div>
-  );
-}

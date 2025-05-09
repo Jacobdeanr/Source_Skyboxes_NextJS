@@ -1,24 +1,22 @@
+import { Swatch } from "./swatch";
+import { ParamSection, ParamRow } from './parametersections';
+
 type Fog = { primaryFogColor?: number[]; secondaryFogColor?: number[] };
 
 export default function FogParams(f: Fog) {
   if (!f || (!f.primaryFogColor && !f.secondaryFogColor)) return null;
   return (
-    <div className="text-sm text-neutral-400">
-      <h3 className="font-semibold mb-1 mt-2">Fog Parameters</h3>
-      <ul className="list-inside space-y-0.5">
-        {f.primaryFogColor?.length && (
-          <li>
-            <span className="font-semibold">Primary Fog Color:</span>{' '}
-            {f.primaryFogColor.join(' ')}
-          </li>
+    <ParamSection title="Fog Parameters">
+      {f.primaryFogColor?.length && (
+          <ParamRow label="Primary Fog Color">
+            <Swatch rgb={f.primaryFogColor!}/>
+          </ParamRow>
         )}
-        {f.secondaryFogColor?.length && (
-          <li>
-            <span className="font-semibold">Secondary Fog Color:</span>{' '}
-            {f.secondaryFogColor.join(' ')}
-          </li>
+      {f.secondaryFogColor?.length && (
+          <ParamRow label="Secondary Fog Color">
+            <Swatch rgb={f.secondaryFogColor!}/>
+          </ParamRow>
         )}
-      </ul>
-    </div>
+    </ParamSection>
   );
 }

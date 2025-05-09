@@ -1,3 +1,5 @@
+import { ParamSection, ParamRow } from './parametersections';
+
 type Props = {
     author?: string;
     publishDate?: string;
@@ -15,24 +17,23 @@ type Props = {
       <>
         {description && <p className="text-sm text-neutral-300">{description}</p>}
   
-        <ul className="text-sm text-neutral-400 space-y-0.5">
-          {author && (
-            <li>
-              <span className="font-semibold">Author:</span> {author}
-            </li>
-          )}
+        <ParamSection title="Metadata">
+          {/* {author && (
+            <ParamRow label="Author">
+              {author}
+          </ParamRow>
+          )} */}
           {publishDate && (
-            <li>
-              <span className="font-semibold">Published:</span> {publishDate}
-            </li>
+            <ParamRow label="Published">
+              {publishDate}
+            </ParamRow>
           )}
-          {categories?.length && (
-            <li>
-              <span className="font-semibold">Categories:</span>{' '}
+          {/*categories?.length && (
+            <ParamRow label="Categories">
               {categories.join(', ')}
-            </li>
-          )}
-        </ul>
+            </ParamRow>
+          )*/}
+        </ParamSection>
       </>
     );
   }

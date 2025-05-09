@@ -23,12 +23,5 @@
       105,
       200
     ]
-  },
-  "fogParameters": {
-    "primaryFogColor": [
-      0,
-      0,
-      0
-    ]
   }
 }

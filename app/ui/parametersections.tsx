@@ -9,12 +9,11 @@ export function ParamSection({
 }) {
   
   return (
-    <section className="mt-6 first:mt-0">
+    <section>
       <h4
         className="
           mb-2
-          text-xs font-semibold uppercase tracking-wider
-          text-neutral-400
+          text-sm font-bold uppercase tracking-wider
         "
       >
         {title}
@@ -22,7 +21,7 @@ export function ParamSection({
 
       <dl
         className="
-          grid grid-cols-[8rem_1fr]            /* 8 rem label column */
+          grid grid-cols-[8rem_1fr]
           gap-y-2 gap-x-4
           text-[clamp(0.85rem,0.9vw,0.95rem)]
         "

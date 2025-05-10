@@ -9,28 +9,33 @@ type Sun = {
   };
 
   export default function SunParams(s: Sun) {
-    if (!s) return null;
+    const { sunAngle, pitch, brightness, ambience } = s ?? {};
   
-    const { sunAngle, pitch, brightness, ambience } = s;
-  
-    if (!sunAngle && pitch === undefined && !brightness && !ambience) return null;
+    const noData =
+      sunAngle === undefined &&
+      pitch     === undefined &&
+      !brightness &&
+      !ambience;
   
     return (
       <ParamSection title="Sun Parameters">
-        {sunAngle && <ParamRow label="Sun Angle">{sunAngle}</ParamRow>}
-  
-        {pitch !== undefined && <ParamRow label="Pitch">{pitch}</ParamRow>}
-  
-        {brightness && (
-          <ParamRow label="Brightness">
-            <Swatch rgb={brightness} />
+        {noData ? (
+          <ParamRow label="">
+            <span className="italic text-neutral-500">
+              No data available.
+            </span>
           </ParamRow>
-        )}
-  
-        {ambience && (
-          <ParamRow label="Ambient">
-            <Swatch rgb={ambience} />
-          </ParamRow>
+        ) : (
+          <>
+            <ParamRow label="Sun Angle">{sunAngle}</ParamRow>
+            <ParamRow label="Pitch">{pitch}</ParamRow>
+            <ParamRow label="Brightness">
+              {brightness && <Swatch rgb={brightness} />}
+            </ParamRow>
+            <ParamRow label="Ambient">
+              {ambience && <Swatch rgb={ambience} />}
+            </ParamRow>
+          </>
         )}
       </ParamSection>
     );

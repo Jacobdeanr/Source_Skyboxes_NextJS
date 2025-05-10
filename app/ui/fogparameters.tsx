@@ -4,19 +4,28 @@ import { ParamSection, ParamRow } from './parametersections';
 type Fog = { primaryFogColor?: number[]; secondaryFogColor?: number[] };
 
 export default function FogParams(f: Fog) {
-  if (!f || (!f.primaryFogColor && !f.secondaryFogColor)) return null;
+  const { primaryFogColor, secondaryFogColor } = f ?? {};
+
+  const noData = !primaryFogColor && !secondaryFogColor;
+
   return (
     <ParamSection title="Fog Parameters">
-      {f.primaryFogColor?.length && (
+      {noData ? (
+        <ParamRow label="">
+          <span className="italic text-neutral-500">
+            No data available.
+          </span>
+        </ParamRow>
+      ) : (
+        <>
           <ParamRow label="Primary Fog Color">
-            <Swatch rgb={f.primaryFogColor!}/>
+            {primaryFogColor && <Swatch rgb={primaryFogColor} />}
           </ParamRow>
-        )}
-      {f.secondaryFogColor?.length && (
           <ParamRow label="Secondary Fog Color">
-            <Swatch rgb={f.secondaryFogColor!}/>
+            {secondaryFogColor && <Swatch rgb={secondaryFogColor} />}
           </ParamRow>
-        )}
+        </>
+      )}
     </ParamSection>
   );
 }

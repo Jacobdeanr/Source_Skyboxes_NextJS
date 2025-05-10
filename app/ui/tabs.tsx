@@ -3,18 +3,13 @@
 import { useState, ReactNode } from 'react';
 
 export interface TabItem {
-  /** unique key for this tab */
   value: string;
-  /** the button label */
   label: string;
-  /** what to render when active */
   content: ReactNode;
 }
 
 export interface TabsProps {
-  /** list of tabs to show */
   items: TabItem[];
-  /** which tab to open by default (falls back to the first) */
   defaultValue?: string;
 }
 
@@ -26,7 +21,7 @@ export function Tabs({ items, defaultValue }: TabsProps) {
   return (
     <div className="w-full">
       {/* Full-width tab bar with equal-width buttons */}
-      <div className="flex w-full divide-x divide-neutral-700/60 rounded-md p-1">
+      <div className="flex w-full divide-x divide-neutral-700/60 rounded-md">
         {items.map(({ value, label }) => {
           const isActive = value === active;
           return (

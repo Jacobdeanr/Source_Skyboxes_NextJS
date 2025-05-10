@@ -34,16 +34,20 @@ export function ParamSection({
 }
 
 export function ParamRow({
-    label,
-    children,
-  }: {
-    label: string;
-    children: ReactNode;
-  }) {
-    return (
-      <>
-        <dt className="text-neutral-400 font-medium">{label}</dt>
-        <dd className="text-neutral-100">{children}</dd>
-      </>
-    );
-  }
+  label,
+  children,
+}: {
+  label: string;
+  children?: ReactNode;      /*  ⬅️  now optional */
+}) {
+  return (
+    <>
+      <dt className="text-neutral-400 font-medium">{label}</dt>
+      <dd className="text-neutral-100">
+        {children ?? (
+          <span className="italic text-neutral-500">N/A</span>
+        )}
+      </dd>
+    </>
+  );
+}

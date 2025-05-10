@@ -1,12 +1,9 @@
 {
   "author": "Jacob Robbins",
   "description": "",
-  "publishDate": "2016-01-27",
+  "publishDate": "2025-05-10",
   "license": "CC BY 4.0",
-  "categories": [
-    "Evening",
-    "Cloudy"
-  ],
+  "categories": ["Evening", "Cloudy"],
   "steamMaps": [
     {
       "name": "Vacant (MW19)",
@@ -15,19 +12,12 @@
   ],
   "sunParameters": {
     "sunAngle": "0 36 0",
-    "pitch": "-25",
-    "brightness": [
-      254,
-      193,
-      133,
-      450
-    ]
+    "pitch": "-8",
+    "brightness": [233, 168, 103, 550],
+    "ambience": [164, 179, 200, 70]
   },
   "fogParameters": {
-    "primaryFogColor": [
-      255,
-      251,
-      164
-    ]
+    "primaryFogColor": [130, 119, 99],
+    "secondaryFogColor": [82, 85, 90]
   }
 }

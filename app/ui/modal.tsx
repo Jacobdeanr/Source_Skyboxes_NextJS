@@ -20,13 +20,21 @@ function useModalBehaviour(onClose: () => void) {
   useEffect(() => {
     const prev = document.documentElement.style.overflow;
     document.documentElement.style.overflow = 'hidden';
-    return () => (document.documentElement.style.overflow = prev);
+    return () => {
+      document.documentElement.style.overflow = prev;
+    };
   }, []);
 
   useEffect(() => {
-    const h = (e: KeyboardEvent) => e.key === 'Escape' && onClose();
+    const h = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    };
     window.addEventListener('keydown', h);
-    return () => window.removeEventListener('keydown', h);
+    return () => {
+      window.removeEventListener('keydown', h);
+    };
   }, [onClose]);
 }
 

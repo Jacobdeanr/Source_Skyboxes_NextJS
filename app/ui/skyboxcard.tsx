@@ -4,8 +4,6 @@ import Image from 'next/image';
 import Modal from './modal';
 import { useState } from 'react';
 
-type Props = { slug: string };
-
 export default function SkyboxCard({
   slug,
   meta,

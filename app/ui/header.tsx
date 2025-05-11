@@ -3,11 +3,11 @@
 import { useState, useEffect } from 'react';
 
 interface HeaderProps {
-  onChange: (opts: { sort: string; query: string }) => void;
+  onChange: (opts: { sort: 'alpha' | 'alpha-desc' | 'published-date-desc' | 'published-date-asc'; query: string }) => void;
 }
 
 export default function Header({ onChange }: HeaderProps) {
-  const [sort, setSort]   = useState<'alpha' | 'date'>('alpha');
+  const [sort, setSort]   = useState<'alpha' | 'alpha-desc' | 'published-date-desc' | 'published-date-asc'>('published-date-desc');
   const [query, setQuery] = useState('');
 
   useEffect(() => onChange({ sort, query }), [sort, query, onChange]);
@@ -48,8 +48,10 @@ export default function Header({ onChange }: HeaderProps) {
               focus:outline-none focus:ring-2 focus:ring-amber-500
             "
           >
-            <option value="alpha">A → Z</option>
-            <option value="date">Z → A</option>
+            <option value="published-date-desc">Published Date (Newest)</option>
+            <option value="alpha">Name (A → Z)</option>
+            <option value="alpha-desc">Name (Z → A)</option>
+            <option value="published-date-asc">Published Date (Oldest)</option>
           </select>
         </div>
       </div>

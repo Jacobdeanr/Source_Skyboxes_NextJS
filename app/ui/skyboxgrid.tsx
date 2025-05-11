@@ -11,8 +11,8 @@ export default function SkyboxGrid({
   slugs: string[];
   meta: Record<string, any>;
 }) {
-  const [filter, setFilter] = useState<{ sort: string; query: string }>({
-    sort: 'alpha',
+  const [filter, setFilter] = useState<{ sort: 'alpha' | 'alpha-desc' | 'published-date-desc' | 'published-date-asc'; query: string }>({
+    sort: 'published-date-desc',
     query: '',
   });
 
@@ -22,8 +22,29 @@ export default function SkyboxGrid({
       const q = filter.query.toLowerCase();
       list = list.filter((s) => s.includes(q));
     }
-    if (filter.sort === 'date') list.sort().reverse();
-    else list.sort();
+    switch (filter.sort) {
+      case 'alpha-desc':
+        list.sort().reverse(); // Z-A
+        break;
+      case 'published-date-desc': // Newest to Oldest
+        list.sort((a, b) => {
+          const dateA = meta[a]?.publishDate ? new Date(meta[a].publishDate).getTime() : 0;
+          const dateB = meta[b]?.publishDate ? new Date(meta[b].publishDate).getTime() : 0;
+          return dateB - dateA; // Sorts undefined/null dates to the end (as oldest)
+        });
+        break;
+      case 'published-date-asc': // Oldest to Newest
+        list.sort((a, b) => {
+          const dateA = meta[a]?.publishDate ? new Date(meta[a].publishDate).getTime() : Number.MAX_SAFE_INTEGER;
+          const dateB = meta[b]?.publishDate ? new Date(meta[b].publishDate).getTime() : Number.MAX_SAFE_INTEGER;
+          return dateA - dateB; // Sorts undefined/null dates to the end (as newest)
+        });
+        break;
+      case 'alpha': // A-Z
+      default:
+        list.sort();
+        break;
+    }
 
     return list;
   }, [slugs, filter]);

@@ -6,7 +6,13 @@ import { useState } from 'react';
 
 type Props = { slug: string };
 
-export default function SkyboxCard({ slug }: Props) {
+export default function SkyboxCard({
+  slug,
+  meta,
+}: {
+  slug: string;
+  meta: any;
+}) {
   const [open, setOpen] = useState(false);
   const imgBase = `/Source_Skyboxes_NextJS/skyboxes/${slug}/images`;
 

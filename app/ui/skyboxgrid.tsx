@@ -4,31 +4,33 @@ import { useMemo, useState } from 'react';
 import SkyboxCard from './skyboxcard';
 import Header from './header';
 
-export default function SkyboxGrid({ slugs }: { slugs: string[] }) {
-  const [options, setOptions] = useState<{ sort: string; query: string }>({
+export default function SkyboxGrid({
+  slugs,
+  meta,
+}: {
+  slugs: string[];
+  meta: Record<string, any>;
+}) {
+  const [filter, setFilter] = useState<{ sort: string; query: string }>({
     sort: 'alpha',
     query: '',
   });
 
   const visible = useMemo(() => {
     let list = [...slugs];
-
-    if (options.query) {
-      const q = options.query.toLowerCase();
-      list = list.filter((s) => s.toLowerCase().includes(q));
+    if (filter.query) {
+      const q = filter.query.toLowerCase();
+      list = list.filter((s) => s.includes(q));
     }
+    if (filter.sort === 'date') list.sort().reverse();
+    else list.sort();
 
-    if (options.sort === 'date') {
-      list.sort().reverse(); // slug folders are ISO dates? adjust as needed
-    } else {
-      list.sort();
-    }
     return list;
-  }, [slugs, options]);
+  }, [slugs, filter]);
 
   return (
     <>
-      <Header onChange={setOptions} />
+      <Header onChange={setFilter} />
 
       <section
         className="
@@ -41,7 +43,7 @@ export default function SkyboxGrid({ slugs }: { slugs: string[] }) {
         "
       >
         {visible.map((slug) => (
-          <SkyboxCard key={slug} slug={slug} />
+          <SkyboxCard key={slug} slug={slug} meta={meta[slug]} />
         ))}
       </section>
     </>

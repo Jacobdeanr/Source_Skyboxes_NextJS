@@ -1,11 +1,18 @@
 const fs = require('fs');
 const path = require('path');
 
-const dataDir = path.join(__dirname, '..', 'public', 'data');
-const files = fs.readdirSync(dataDir).filter(file => file.endsWith('.json'));
-const slugs = files.map(fileName => path.basename(fileName, '.json'));
+const dataDir   = path.join(__dirname, '..', 'public', 'data');
+const files     = fs
+  .readdirSync(dataDir)
+  .filter((f) => f.endsWith('.json') && f !== 'index.json');
 
-const outputPath = path.join(dataDir, 'index.json');
-fs.writeFileSync(outputPath, JSON.stringify(slugs, null, 2));
+const all = {};
 
-console.log(`Generated index.json with ${slugs.length} entries at ${outputPath}`);
+files.forEach((fname) => {
+  const slug  = fname.replace(/\.json$/, '');
+  const data  = JSON.parse(fs.readFileSync(path.join(dataDir, fname), 'utf8'));
+  all[slug]   = data;
+});
+
+const out = path.join(dataDir, 'index.json');
+fs.writeFileSync(out, JSON.stringify(all, null, 2));

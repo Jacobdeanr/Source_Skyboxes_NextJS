@@ -7,17 +7,17 @@ const profileLinks = [
   {
     href: "https://github.com/Jacobdeanr",
     label: "GitHub",
-    svgPath: "Source_Skyboxes_NextJS/icons/github-mark-white.svg",
+    svgPath: "/Source_Skyboxes_NextJS/icons/github-mark-white.svg",
   },
   {
     href: "https://discord.gg/grqAfezMVs",
     label: "Discord",
-    svgPath: "Source_Skyboxes_NextJS/icons/discord-symbol-white.svg",
+    svgPath: "/Source_Skyboxes_NextJS/icons/discord-symbol-white.svg",
   },
   {
     href: "https://steamcommunity.com/id/Jakobi_OBrien",
     label: "Steam",
-    svgPath: "Source_Skyboxes_NextJS/icons/steam-logo.svg",
+    svgPath: "/Source_Skyboxes_NextJS/icons/steam-logo.svg",
   },
 ];
 

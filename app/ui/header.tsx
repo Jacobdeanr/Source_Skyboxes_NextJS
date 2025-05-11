@@ -3,7 +3,6 @@
 import { useEffect, useState } from 'react';
 
 interface HeaderProps {
-  /** callback when the user changes filter/sort */
   onChange: (opts: { sort: string; query: string }) => void;
 }
 
@@ -11,7 +10,6 @@ export default function Header({ onChange }: HeaderProps) {
   const [sort,  setSort]  = useState<'alpha' | 'date'>('alpha');
   const [query, setQuery] = useState('');
 
-  // inform parent whenever options change
   useEffect(() => onChange({ sort, query }), [sort, query, onChange]);
 
   return (
@@ -60,7 +58,7 @@ export default function Header({ onChange }: HeaderProps) {
             "
           >
             <option value="alpha">A → Z</option>
-            <option value="date">Newest</option>
+            <option value="date">Z → A</option>
           </select>
         </div>
       </div>

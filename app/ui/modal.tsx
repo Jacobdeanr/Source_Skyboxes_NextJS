@@ -49,23 +49,31 @@ export default function Modal({ slug, onClose }: { slug: string; onClose: () => 
     <div onClick={onClose} className="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-center justify-center p-4">
       <article onClick={e=>e.stopPropagation()} className="w-full max-w-[90vw] sm:max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-4xl max-h-[70vh] overflow-y-auto overscroll-contain bg-neutral-900 rounded-lg shadow-xl ring-1 ring-neutral-700/60">
             {/* Header */}
-            <div className="flex items-center justify-between p-4">
-              
-              {/* Title */}
+            <div
+              className="
+                flex flex-wrap
+                gap-4
+                sm:flex-nowrap
+                items-start sm:items-center
+                justify-between
+                p-4
+              "
+            >
+              {/* Title + author */}
               <div className="flex flex-col">
-                <h2 className="text-2xl font-bold">{slug}</h2>
-                {/* Author */}
-                <span className="text-sm text-neutral-400">By {meta?.author}</span>
+                <h2 className="text-2xl font-bold leading-tight">{slug}</h2>
+                {meta?.author && (
+                  <span className="text-sm text-neutral-400">By {meta.author}</span>
+                )}
               </div>
 
-              {/* Download Button */}
-              <div className="flex">
-                <DownloadButton
-                  href={`/Source_Skyboxes_NextJS/skyboxes/${slug}/download/${slug}.7z`}
-                  download
-                  size={meta?.fileSize}
-                />
-              </div>
+              {/* Download (never shrink) */}
+              <DownloadButton
+                href={`/Source_Skyboxes_NextJS/skyboxes/${slug}/download/${slug}.7z`}
+                download
+                size={meta?.fileSize}
+                className="flex-shrink-0"   /* ⬅️ keeps the button’s width          */
+              />
             </div>
 
             {/* Preview */}
@@ -92,8 +100,11 @@ export default function Modal({ slug, onClose }: { slug: string; onClose: () => 
                     </div>
                   ),
                 },
-                { value: 'community-maps', label: 'Community Maps', content: <MapList maps={meta?.steamMaps} /> },
-              ]} />
+                { value: 'community-maps',
+                  label: 'Community Maps',
+                  content: <MapList maps={meta?.steamMaps} /> },
+              ]}
+            />
           </div>
           
       </article>

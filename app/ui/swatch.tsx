@@ -9,7 +9,6 @@ export function Swatch({ rgb }: SwatchProps) {
     <span
       className="
         inline-flex overflow-hidden rounded-md ring-1 ring-neutral-700/40
-        text-sm font-mono
       "
       title={color}
     >
@@ -21,8 +20,7 @@ export function Swatch({ rgb }: SwatchProps) {
       <span
         className="
           px-2 flex items-center
-          bg-neutral-800/60 backdrop-blur-[2px]
-          text-neutral-100
+          bg-neutral-800
         "
       >
         {values}

@@ -21,9 +21,10 @@ export function ParamSection({
 
       <dl
         className="
-          grid grid-cols-[8rem_1fr]
+          grid grid grid-cols-[9.5rem_1fr]
           gap-y-2 gap-x-4
-          text-[clamp(0.85rem,0.9vw,0.95rem)]
+          text-sm
+          font-sans
         "
       >
         {children}
@@ -38,14 +39,14 @@ export function ParamRow({
   children,
 }: {
   label: string;
-  children?: ReactNode;      /*  ⬅️  now optional */
+  children?: ReactNode;
 }) {
   return (
     <>
-      <dt className="text-neutral-400 font-medium">{label}</dt>
-      <dd className="text-neutral-100">
+      <dt className="text-neutral-400">{label}</dt>
+      <dd >
         {children ?? (
-          <span className="italic text-neutral-500">N/A</span>
+          <span className="italic text-neutral-400">N/A</span>
         )}
       </dd>
     </>

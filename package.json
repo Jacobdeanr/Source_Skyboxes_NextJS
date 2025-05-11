@@ -3,7 +3,9 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-      "dev": "next dev --turbopack",
+      "prepare-data": "node scripts/generate-index.js",
+      "dev": "npm run prepare-data && next dev --turbopack",
+      "prebuild": "npm run prepare-data",
       "build": "next build",
       "start": "next start",
       "lint": "next lint"

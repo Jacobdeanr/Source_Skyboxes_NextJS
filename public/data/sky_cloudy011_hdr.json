@@ -12,5 +12,25 @@
       "name": "Butcher's Den Forever",
       "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=1835697333"
     }
-  ]
+  ],
+  "sunParameters": {
+    "sunAngle": "0 6 0",
+    "pitch": "-6",
+    "brightness": [
+      255,
+      147,
+      41,
+      512
+    ],
+    "ambience": [
+      72, 72, 72, 512
+    ]
+  },
+  "fogParameters": {
+    "primaryFogColor": [
+      72,
+      72,
+      72
+    ]
+  }
 }

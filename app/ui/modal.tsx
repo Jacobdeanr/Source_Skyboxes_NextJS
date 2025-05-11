@@ -69,7 +69,7 @@ export default function Modal({ slug, onClose }: { slug: string; onClose: () => 
 
               {/* Download (never shrink) */}
               <DownloadButton
-                href={`/Source_Skyboxes_NextJS/skyboxes/${slug}/download/${slug}.7z`}
+                href={`/Source_Skyboxes_NextJS/skyboxes/${slug}/downloads/${slug}.7z`}
                 download
                 size={meta?.fileSize}
                 className="flex-shrink-0"   /* ⬅️ keeps the button’s width          */

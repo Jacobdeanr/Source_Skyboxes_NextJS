@@ -1,28 +1,31 @@
-'use client';
 
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 import SkyboxCard from './skyboxcard';
-import Header from './header';
+
+// Define the SortOption type matching the one in header.tsx / page.tsx
+type SortOption = 'alpha' | 'alpha-desc' | 'published-date-desc' | 'published-date-asc';
 
 export default function SkyboxGrid({
   slugs,
   meta,
+  sort,
+  query,
 }: {
   slugs: string[];
   meta: Record<string, any>;
+  sort: SortOption;
+  query: string;
 }) {
-  const [filter, setFilter] = useState<{ sort: 'alpha' | 'alpha-desc' | 'published-date-desc' | 'published-date-asc'; query: string }>({
-    sort: 'published-date-desc',
-    query: '',
-  });
 
   const visible = useMemo(() => {
     let list = [...slugs];
-    if (filter.query) {
-      const q = filter.query.toLowerCase();
-      list = list.filter((s) => s.includes(q));
+    // Filter based on query prop
+    if (query) {
+      const q = query.toLowerCase();
+      list = list.filter((s) => s.includes(q) || meta[s]?.title?.toLowerCase().includes(q));
     }
-    switch (filter.sort) {
+    // Sort based on sort prop
+    switch (sort) {
       case 'alpha-desc':
         list.sort().reverse(); // Z-A
         break;
@@ -46,27 +49,24 @@ export default function SkyboxGrid({
         break;
     }
 
-    return list;
-  }, [slugs, filter]);
+    return list; // Add this line back
+  }, [slugs, meta, query, sort]); // Update dependencies
 
   return (
-    <>
-      <Header onChange={setFilter} />
-
-      <section
-        className="
-          grid gap-4 pt-6
-          grid-cols-[repeat(auto-fill,minmax(16rem,1fr))]
-          sm:grid-cols-[repeat(auto-fill,minmax(18rem,1fr))]
-          lg:grid-cols-[repeat(auto-fill,minmax(22rem,1fr))]
-          2xl:grid-cols-[repeat(auto-fill,minmax(26rem,1fr))]
-          px-4 sm:px-6 lg:px-8
-        "
-      >
-        {visible.map((slug) => (
-          <SkyboxCard key={slug} slug={slug} meta={meta[slug]} />
-        ))}
-      </section>
-    </>
+    // Correctly render only the grid section
+    <section
+      className="
+        grid gap-4 pt-6
+        grid-cols-[repeat(auto-fill,minmax(16rem,1fr))]
+        sm:grid-cols-[repeat(auto-fill,minmax(18rem,1fr))]
+        lg:grid-cols-[repeat(auto-fill,minmax(22rem,1fr))]
+        2xl:grid-cols-[repeat(auto-fill,minmax(26rem,1fr))]
+        px-4 sm:px-6 lg:px-8
+      "
+    >
+      {visible.map((slug) => (
+        <SkyboxCard key={slug} slug={slug} meta={meta[slug]} />
+      ))}
+    </section>
   );
 }

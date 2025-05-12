@@ -23,14 +23,15 @@ export default function Header({ sort, setSort, query, setQuery }: HeaderProps) 
 
   return (
     <header className="sticky top-0 z-40 backdrop-blur-md bg-neutral-900/70 border-b border-neutral-800/60">
-      <div className="mx-auto max-w-6xl flex items-center justify-between px-4 sm:px-6 h-16">
+      <div className="mx-auto max-w-6xl flex items-center justify-between gap-4 px-4 sm:px-6 h-16">
+
           {/* title */}
-          <h1 className="text-lg sm:text-2xl font-bold tracking-wide whitespace-nowrap select-none">
+          <h1 className="text-lg md:text-xl xl:text-2xl font-bold tracking-wide whitespace-nowrap select-none min-w-0">
             Jacob Robbins&rsquo; <span className="font-light">Skybox&nbsp;Library</span>
           </h1>
 
         {/* right-side cluster */}
-        <div className="flex items-center gap-2 sm:gap-3">
+        <div className="flex justify-end items-center gap-2 sm:gap-3">
           {/* Search + Sort: Desktop (>= sm) */}
           <div className="hidden sm:flex items-center gap-3">
             <input
@@ -38,7 +39,7 @@ export default function Header({ sort, setSort, query, setQuery }: HeaderProps) 
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search…"
               className="
-                flex-auto min-w-0 max-w-[40vw]
+                flex-auto min-w-0 max-w-xs
                 rounded-md bg-neutral-800/70
                 px-3 py-1.5 text-sm placeholder:text-neutral-500
                 focus:outline-none focus:ring-2 focus:ring-amber-500
@@ -57,10 +58,16 @@ export default function Header({ sort, setSort, query, setQuery }: HeaderProps) 
             ))}
           </nav>
 
-          {/* More Menu Button: Mobile-only (< sm) */}
-          {/* TODO: Consider moving Search/Sort/Profile Links into MoreMenu content for mobile */}
-          <div className="sm:hidden">
-            <MoreMenu />
+          {/* More Menu Button: Visible below lg */}
+          {/* Contains items hidden from the main bar at smaller breakpoints */}
+          <div className="lg:hidden flex-shrink-0">
+            <MoreMenu
+              profileLinks={profileLinks}
+              sort={sort}
+              setSort={setSort}
+              query={query}
+              setQuery={setQuery}
+            />
           </div>
         </div>
       </div>

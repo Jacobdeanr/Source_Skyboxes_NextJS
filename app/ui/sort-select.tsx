@@ -14,8 +14,8 @@ export default function SortSelect({ value, onChange }: SortSelectProps) {
       value={value}
       onChange={(e) => onChange(e.target.value as SortOption)}
       className="
-        rounded-md bg-neutral-800/70
-        px-2 py-2 text-sm
+        h-8 rounded-md bg-neutral-800/70
+        px-2 py-1 text-xs
         focus:outline-none focus:ring-2 focus:ring-amber-500
       "
     >

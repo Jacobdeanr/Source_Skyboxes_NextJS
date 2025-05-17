@@ -8,6 +8,8 @@
     "Overcast",
     "Cloudy"
   ],
+  "timeOfDay": "Evening",
+  "weatherCondition": "Overcast",
   "steamMaps": [
     {
       "name": "Revival | City of Ash | Event Map",

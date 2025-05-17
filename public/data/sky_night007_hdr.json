@@ -7,6 +7,8 @@
     "Night",
     "Cloudy"
   ],
+  "timeOfDay": "Night",
+  "weatherCondition": "Cloudy",
   "steamMaps": [
     {
       "name": "Anvers Station",

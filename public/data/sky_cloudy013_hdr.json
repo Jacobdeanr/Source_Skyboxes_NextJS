@@ -5,9 +5,10 @@
   "license": "CC BY 4.0",
   "categories": [
     "Afternoon",
-    "Cloudy",
-    "Overcast"
+    "Cloudy"
   ],
+  "timeOfDay": "Afternoon",
+  "weatherCondition": "Cloudy",
   "steamMaps": [
     {
       "name": "gm_southbeach_d",

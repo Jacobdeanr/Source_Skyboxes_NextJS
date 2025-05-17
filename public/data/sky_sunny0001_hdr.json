@@ -6,5 +6,7 @@
   "categories": [
     "Afternoon",
     "Clear"
-  ]
+  ],
+  "timeOfDay": "Afternoon",
+  "weatherCondition": "Clear"
 }

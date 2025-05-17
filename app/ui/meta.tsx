@@ -4,6 +4,8 @@ type Props = {
     author?: string;
     publishDate?: string;
     categories?: string[];
+    timeOfDay?: string;
+    weatherCondition?: string;
     description?: string;
   };
   
@@ -11,6 +13,8 @@ type Props = {
     author,
     publishDate,
     categories,
+    timeOfDay,
+    weatherCondition,
     description,
   }: Props) {
     return (

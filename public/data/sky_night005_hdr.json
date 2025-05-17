@@ -7,6 +7,8 @@
     "Night",
     "Overcast"
   ],
+  "timeOfDay": "Night",
+  "weatherCondition": "Overcast",
   "steamMaps": [
     {
       "name": "jb_frostbite",

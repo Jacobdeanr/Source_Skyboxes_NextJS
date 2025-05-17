@@ -7,5 +7,7 @@
     "Morning",
     "Afternoon",
     "Cloudy"
-  ]
+  ],
+  "timeOfDay": "Morning",
+  "weatherCondition": "Cloudy"
 }

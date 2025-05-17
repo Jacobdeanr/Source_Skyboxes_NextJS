@@ -7,6 +7,8 @@
     "Afternoon",
     "Cloudy"
   ],
+  "timeOfDay": "Afternoon",
+  "weatherCondition": "Cloudy",
   "steamMaps": [
     {
       "name": "Overgrown",

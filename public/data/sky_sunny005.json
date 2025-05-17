@@ -7,6 +7,8 @@
     "Morning",
     "Clear"
   ],
+  "timeOfDay": "Morning",
+  "weatherCondition": "Clear",
   "steamMaps": [
     {
       "name": "Desert Siege",

@@ -6,5 +6,7 @@
   "categories": [
     "Evening",
     "Cloudy"
-  ]
+  ],
+  "timeOfDay": "Evening",
+  "weatherCondition": "Cloudy"
 }

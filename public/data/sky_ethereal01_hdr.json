@@ -8,6 +8,8 @@
     "Cloudy",
     "Evening"
   ],
+  "timeOfDay": "Evening",
+  "weatherCondition": "Cloudy",
   "steamMaps": [
     {
       "name": "Ethos 2",

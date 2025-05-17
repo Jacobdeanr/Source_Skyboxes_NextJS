@@ -4,6 +4,8 @@
   "publishDate": "2025-05-10",
   "license": "CC BY 4.0",
   "categories": ["Evening", "Cloudy"],
+  "timeOfDay": "Evening",
+  "weatherCondition": "Cloudy",
   "steamMaps": [
     {
       "name": "Vacant (MW19)",

@@ -8,6 +8,8 @@
     "Evening",
     "Cloudy"
   ],
+  "timeOfDay": "Morning",
+  "weatherCondition": "Cloudy",
   "sunParameters": {
     "sunAngle": "0 113 0",
     "pitch": "-40",

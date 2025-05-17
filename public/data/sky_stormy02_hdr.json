@@ -7,6 +7,8 @@
     "Overcast",
     "Cloudy"
   ],
+  "timeOfDay": "Evening",
+  "weatherCondition": "Overcast",
   "steamMaps": [
     {
       "name": "Section 9",

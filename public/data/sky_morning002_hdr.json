@@ -8,6 +8,8 @@
     "Evening",
     "Clear"
   ],
+  "timeOfDay": "Morning",
+  "weatherCondition": "Clear",
   "steamMaps": [
     {
       "name": "Lights (Mostly) Out",

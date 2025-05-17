@@ -9,7 +9,7 @@ import DownloadButton from './downloadbutton';
 
 type MapLink = { name: string; url: string };
 type Meta = {
-  author?: string; publishDate?: string; categories?: string[]; description?: string;
+  author?: string; publishDate?: string; categories?: string[]; timeOfDay?: string; weatherCondition?: string; description?: string;
   steamMaps?: MapLink[];
   sunParameters?: any;
   fogParameters?: any;

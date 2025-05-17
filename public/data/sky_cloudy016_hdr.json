@@ -5,9 +5,10 @@
   "license": "CC BY 4.0",
   "categories": [
     "Morning",
-    "Afternoon",
     "Cloudy"
   ],
+  "timeOfDay": "Morning",
+  "weatherCondition": "Cloudy",
   "sunParameters": {
     "sunAngle": "0 145 0",
     "pitch": "-18",

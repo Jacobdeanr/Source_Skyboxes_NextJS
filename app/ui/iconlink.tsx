@@ -28,8 +28,8 @@ export default function IconLink({ href, label, svg, menuMode = false }: IconLin
         <Image 
           src={svg} 
           alt="" 
-          width={20} 
-          height={20} 
+          width={24} 
+          height={24} 
           className="object-contain max-w-full max-h-full" 
         />
       </div>

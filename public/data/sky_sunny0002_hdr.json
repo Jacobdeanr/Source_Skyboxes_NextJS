@@ -7,6 +7,8 @@
     "Afternoon",
     "Clear"
   ],
+  "timeOfDay": "Afternoon",
+  "weatherCondition": "Clear",
   "steamMaps": [
     {
       "name": "Flatsand",

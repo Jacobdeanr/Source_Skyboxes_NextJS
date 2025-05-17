@@ -7,6 +7,8 @@
     "Evening",
     "Clear"
   ],
+  "timeOfDay": "Evening",
+  "weatherCondition": "Clear",
   "sunParameters": {
     "sunAngle": "0 330 0",
     "pitch": "-5",

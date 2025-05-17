@@ -8,6 +8,8 @@
     "Hazy",
     "Cloudy"
   ],
+  "timeOfDay": "Afternoon",
+  "weatherCondition": "Hazy",
   "sunParameters": {
     "sunAngle": "0 170 0",
     "pitch": "-45",

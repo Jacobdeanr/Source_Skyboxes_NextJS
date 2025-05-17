@@ -7,6 +7,8 @@
     "Afternoon",
     "Cloudy"
   ],
+  "timeOfDay": "Afternoon",
+  "weatherCondition": "Cloudy",
   "sunParameters": {
     "sunAngle": "0 85 0",
     "pitch": "-56",

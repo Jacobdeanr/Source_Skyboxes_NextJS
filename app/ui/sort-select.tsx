@@ -1,7 +1,6 @@
-/* app/ui/sort-select.tsx */
 'use client';
 
-type SortOption = 'alpha' | 'alpha-desc' | 'published-date-desc' | 'published-date-asc';
+import { SortOption } from './sort-types';
 
 interface SortSelectProps {
   value: SortOption;
@@ -19,10 +18,8 @@ export default function SortSelect({ value, onChange }: SortSelectProps) {
         focus:outline-none focus:ring-2 focus:ring-amber-500
       "
     >
-      <option value="published-date-desc">Newest</option>
-      <option value="alpha">Name A → Z</option>
-      <option value="alpha-desc">Name Z → A</option>
-      <option value="published-date-asc">Oldest</option>
+      <option value="time-of-day">Time of Day</option>
+      <option value="weather-conditions">Weather Conditions</option>
     </select>
   );
 }

@@ -3,20 +3,22 @@ import { useMemo } from 'react';
 import SkyboxCard from './skyboxcard';
 
 // Define the SortOption type matching the one in header.tsx / page.tsx
-type SortOption = 'alpha' | 'alpha-desc' | 'published-date-desc' | 'published-date-asc';
+import { SortOption } from './sort-types';
+
+const TIME_OF_DAY_ORDER = ['Morning', 'Afternoon', 'Evening', 'Night', 'Other'];
+const WEATHER_CONDITIONS_ORDER = ['Clear', 'Cloudy', 'Hazy', 'Overcast', 'Other'];
 
 export default function SkyboxGrid({
   slugs,
   meta,
-  sort,
+  sort = 'time-of-day',
   query,
 }: {
   slugs: string[];
   meta: Record<string, any>;
-  sort: SortOption;
+  sort?: SortOption;
   query: string;
 }) {
-
   const visible = useMemo(() => {
     let list = [...slugs];
     // Filter based on query prop
@@ -24,49 +26,59 @@ export default function SkyboxGrid({
       const q = query.toLowerCase();
       list = list.filter((s) => s.includes(q) || meta[s]?.title?.toLowerCase().includes(q));
     }
-    // Sort based on sort prop
-    switch (sort) {
-      case 'alpha-desc':
-        list.sort().reverse(); // Z-A
-        break;
-      case 'published-date-desc': // Newest to Oldest
-        list.sort((a, b) => {
-          const dateA = meta[a]?.publishDate ? new Date(meta[a].publishDate).getTime() : 0;
-          const dateB = meta[b]?.publishDate ? new Date(meta[b].publishDate).getTime() : 0;
-          return dateB - dateA; // Sorts undefined/null dates to the end (as oldest)
-        });
-        break;
-      case 'published-date-asc': // Oldest to Newest
-        list.sort((a, b) => {
-          const dateA = meta[a]?.publishDate ? new Date(meta[a].publishDate).getTime() : Number.MAX_SAFE_INTEGER;
-          const dateB = meta[b]?.publishDate ? new Date(meta[b].publishDate).getTime() : Number.MAX_SAFE_INTEGER;
-          return dateA - dateB; // Sorts undefined/null dates to the end (as newest)
-        });
-        break;
-      case 'alpha': // A-Z
-      default:
-        list.sort();
-        break;
-    }
+    return list;
+  }, [slugs, meta, query]);
 
-    return list; // Add this line back
-  }, [slugs, meta, query, sort]); // Update dependencies
+  // Group skyboxes by time of day or weather conditions
+  const groupedSkyboxes = useMemo(() => {
+    console.log(sort);
+    if (sort === 'time-of-day') {
+      const groups: Record<string, string[]> = {};
+
+      visible.forEach((slug) => {
+        const timeOfDay = meta[slug]?.timeOfDay || 'Other';
+        if (!groups[timeOfDay]) {
+          groups[timeOfDay] = [];
+        }
+        groups[timeOfDay].push(slug);
+      });
+
+      // Sort groups by predefined time of day order
+      return TIME_OF_DAY_ORDER
+        .filter(time => groups[time])
+        .map(time => ({ title: time, slugs: groups[time] }));
+    } else {
+      const groups: Record<string, string[]> = {};
+
+      visible.forEach((slug) => {
+        const weatherCondition = meta[slug]?.weatherCondition || 'Other';
+        if (!groups[weatherCondition]) {
+          groups[weatherCondition] = [];
+        }
+        groups[weatherCondition].push(slug);
+      });
+
+      // Sort groups by predefined weather conditions order
+      return WEATHER_CONDITIONS_ORDER
+        .filter(weather => groups[weather])
+        .map(weather => ({ title: weather, slugs: groups[weather] }));
+    }
+  }, [visible, meta, sort]);
 
   return (
-    // Correctly render only the grid section
-    <section
-      className="
-        grid gap-4 pt-6
-        grid-cols-[repeat(auto-fill,minmax(16rem,1fr))]
-        sm:grid-cols-[repeat(auto-fill,minmax(18rem,1fr))]
-        lg:grid-cols-[repeat(auto-fill,minmax(22rem,1fr))]
-        2xl:grid-cols-[repeat(auto-fill,minmax(26rem,1fr))]
-        px-4 sm:px-6 lg:px-8
-      "
-    >
-      {visible.map((slug) => (
-        <SkyboxCard key={slug} slug={slug} meta={meta[slug]} />
+    <div className="space-y-8 mx-auto px-4 py-8">
+      {groupedSkyboxes.map(({ title, slugs }) => (
+        <div key={title}>
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-2xl font-bold text-neutral-200">{title} Skies</h2>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            {slugs.map((slug) => (
+              <SkyboxCard key={slug} slug={slug} meta={meta[slug]} />
+            ))}
+          </div>
+        </div>
       ))}
-    </section>
+    </div>
   );
 }

@@ -5,7 +5,7 @@ import { useState } from 'react';
 import Header from './ui/header';
 import SkyboxGrid from './ui/skyboxgrid';
 
-type SortOption = 'alpha' | 'alpha-desc' | 'published-date-desc' | 'published-date-asc';
+import { SortOption } from './ui/sort-types';
 
 interface HomeClientProps {
   slugs: string[];
@@ -13,7 +13,7 @@ interface HomeClientProps {
 }
 
 export default function HomeClient({ slugs, meta }: HomeClientProps) {
-  const [sort, setSort] = useState<SortOption>('published-date-desc');
+  const [sort, setSort] = useState<SortOption>('time-of-day');
   const [query, setQuery] = useState('');
 
   return (

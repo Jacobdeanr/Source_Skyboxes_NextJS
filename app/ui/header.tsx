@@ -9,7 +9,7 @@ import { profileLinks } from './profile-links';
 
 import SortSelect from './sort-select';
 
-type SortOption = 'alpha' | 'alpha-desc' | 'published-date-desc' | 'published-date-asc';
+import { SortOption } from './sort-types';
 
 /* ------------------ main header ------------------ */
 interface HeaderProps {

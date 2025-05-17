@@ -6,6 +6,8 @@
   "categories": [
     "Misc"
   ],
+  "timeOfDay": "Unknown",
+  "weatherCondition": "Unknown",
   "sunParameters": {
     "sunAngle": "0 128 0",
     "pitch": "-44",

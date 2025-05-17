@@ -4,10 +4,10 @@
 import type { Dispatch, SetStateAction } from 'react';
 import { useState } from 'react';
 import IconLink from './iconlink';
-import SortSelect from './sort-select'; // Import SortSelect
+import SortSelect from './sort-select';
 
 // Types matching those in Header/Page
-type SortOption = 'alpha' | 'alpha-desc' | 'published-date-desc' | 'published-date-asc';
+import { SortOption } from './sort-types';
 interface ProfileLink {
   href: string;
   label: string;

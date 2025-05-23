@@ -31,7 +31,6 @@ export default function SkyboxGrid({
 
   // Group skyboxes by time of day or weather conditions
   const groupedSkyboxes = useMemo(() => {
-    console.log(sort);
     if (sort === 'time-of-day') {
       const groups: Record<string, string[]> = {};
 

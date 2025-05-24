@@ -113,11 +113,11 @@ export default function SkyboxGrid({
           <section key={title} className="space-y-8">
             <div className="relative">
               <div className="absolute -left-4 top-1/2 -translate-y-1/2 w-1 h-8 bg-gradient-to-b from-blue-400 to-purple-500 rounded-full" />
-              <h2 className="text-2xl md:text-3xl font-bold text-neutral-100 pl-6">
-                <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+              <h2 className="flex items-center pl-6">
+                <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent text-2xl md:text-3xl font-bold">
                   {title} Skies
                 </span>
-                <span className="ml-4 text-sm md:text-base font-normal text-neutral-400 bg-neutral-800/50 px-3 py-1.5 rounded-full inline-flex items-center">
+                <span className="ml-4 text-sm md:text-base font-normal text-neutral-400 bg-neutral-800/50 px-3 py-1.5 rounded-full inline-flex items-center h-fit">
                   <span className="w-1.5 h-1.5 rounded-full bg-blue-400 mr-2" />
                   {slugs.length} {slugs.length === 1 ? 'Skybox' : 'Skyboxes'}
                 </span>

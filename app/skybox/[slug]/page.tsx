@@ -12,12 +12,13 @@ export async function generateStaticParams() {
   return Object.keys(allData).map((slug) => ({ slug }));
 }
 
-interface PageProps {
+export default function SkyboxPage({
+  params,
+  searchParams, 
+}: {
   params: { slug: string };
-  searchParams?: { [key: string]: string | string[] | undefined };
-}
-
-export default async function SkyboxPage({ params }: PageProps) {
+  searchParams?: Record<string, string | string[] | undefined>;
+}) {
   const dataPath = path.join(process.cwd(), 'public', 'data', `${params.slug}.json`);
   const skyboxData = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
   

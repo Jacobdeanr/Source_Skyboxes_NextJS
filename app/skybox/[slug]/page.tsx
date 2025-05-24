@@ -1,6 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-import Image from 'next/image';
 import SunParams from '@/app/ui/sunparameters';
 import FogParams from '@/app/ui/fogparameters';
 import MapList from '@/app/ui/maplist';
@@ -13,7 +12,12 @@ export async function generateStaticParams() {
   return Object.keys(allData).map((slug) => ({ slug }));
 }
 
-export default async function SkyboxPage({ params }: { params: { slug: string } }) {
+interface PageProps {
+  params: { slug: string };
+  searchParams?: { [key: string]: string | string[] | undefined };
+}
+
+export default async function SkyboxPage({ params }: PageProps) {
   const dataPath = path.join(process.cwd(), 'public', 'data', `${params.slug}.json`);
   const skyboxData = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
   

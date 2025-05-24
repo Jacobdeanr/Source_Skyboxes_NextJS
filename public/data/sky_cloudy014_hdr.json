@@ -9,5 +9,28 @@
     "Cloudy"
   ],
   "timeOfDay": "Morning",
-  "weatherCondition": "Cloudy"
+  "weatherCondition": "Cloudy",
+  "sunParameters": {
+    "sunAngle": "0 264 0",
+    "pitch": "-26",
+    "brightness": [
+      255,
+      252,
+      236,
+      600
+    ],
+    "ambience": [
+      114,
+      135,
+      173,
+      350
+    ]
+  },
+  "fogParameters": {
+    "primaryFogColor": [
+      127,
+      162,
+      202
+    ]
+  }
 }

@@ -1,10 +1,8 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { Tabs } from './tabs';
 import Meta from './meta';
 import SunParams from './sunparameters';
 import FogParams from './fogparameters';
-import MapList from './maplist';
 import ViewDetailsButton from './view-details-button';
 
 // Simple chevron icon component
@@ -16,10 +14,9 @@ const ChevronIcon = ({ isOpen }: { isOpen: boolean }) => (
   />
 );
 
-
 type MapLink = { name: string; url: string };
 type Meta = {
-  author?: string; publishDate?: string; categories?: string[]; timeOfDay?: string; weatherCondition?: string; description?: string;
+  author?: string; publishDate?: string; timeOfDay?: string; weatherCondition?: string; description?: string;
   steamMaps?: MapLink[];
   sunParameters?: any;
   fogParameters?: any;
@@ -78,8 +75,8 @@ export default function Modal({ slug, onClose }: { slug: string; onClose: () => 
         {/* Header */}
         <div className="p-6 pb-0">
           <div>
-            <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-              {slug}
+            <h2 className="text-2xl md:text-3xl font-bold">
+              <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">{slug}</span>
             </h2>
             <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-1">
               {meta?.author && (
@@ -104,7 +101,7 @@ export default function Modal({ slug, onClose }: { slug: string; onClose: () => 
           {/* Quick Actions */}
           <div className="flex items-stretch gap-3 mb-6 h-10">
             <ViewDetailsButton
-              href={`/skybox/${slug}`}
+              href={`/skyboxes/${slug}`}
               className="flex-1 flex items-center justify-center"
             />
             <button

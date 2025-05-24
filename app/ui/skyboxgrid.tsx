@@ -107,19 +107,46 @@ export default function SkyboxGrid({
   }, [visible, meta, sort]);
 
   return (
-    <div className="space-y-8 mx-auto px-4 py-8">
-      {groupedSkyboxes.map(({ title, slugs }: { title: string; slugs: string[] }) => (
-        <div key={title}>
-          <div className="flex items-center justify-between mb-4">
-            <h2 className="text-2xl font-bold text-neutral-200">{title} Skies</h2>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-            {slugs.map((slug: string) => (
-              <SkyboxCard key={slug} slug={slug} meta={meta[slug]} />
-            ))}
-          </div>
-        </div>
-      ))}
+    <div className="min-h-screen">
+      <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-16">
+        {groupedSkyboxes.map(({ title, slugs }: { title: string; slugs: string[] }) => (
+          <section key={title} className="space-y-8">
+            <div className="relative">
+              <div className="absolute -left-4 top-1/2 -translate-y-1/2 w-1 h-8 bg-gradient-to-b from-blue-400 to-purple-500 rounded-full" />
+              <h2 className="text-2xl md:text-3xl font-bold text-neutral-100 pl-6">
+                <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                  {title} Skies
+                </span>
+                <span className="ml-4 text-sm md:text-base font-normal text-neutral-400 bg-neutral-800/50 px-3 py-1.5 rounded-full inline-flex items-center">
+                  <span className="w-1.5 h-1.5 rounded-full bg-blue-400 mr-2" />
+                  {slugs.length} {slugs.length === 1 ? 'Skybox' : 'Skyboxes'}
+                </span>
+              </h2>
+              <p className="mt-2 text-sm text-neutral-400 pl-6 max-w-2xl">
+                Browse the collection of {title.toLowerCase()} skyboxes for your next project.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6">
+              {slugs.map((slug: string) => (
+                <SkyboxCard key={slug} slug={slug} meta={meta[slug] || {}} />
+              ))}
+            </div>
+            {/*
+            {slugs.length > 4 && (
+              <div className="text-center pt-4">
+                <button className="inline-flex items-center text-sm font-medium text-blue-400 hover:text-blue-300 transition-colors">
+                  View all {slugs.length} {title.toLowerCase()} skies
+                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
+            )}
+            */}
+          </section>
+        ))}
+      </div>
     </div>
   );
 }

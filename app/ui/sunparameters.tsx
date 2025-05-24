@@ -1,7 +1,7 @@
 import { Swatch } from "./swatch";
 import { ParamSection, ParamRow } from './parametersections';
 
-type Sun = {
+export type Sun = {
     sunAngle?: string;
     pitch?: string | number;
     brightness?: number[];

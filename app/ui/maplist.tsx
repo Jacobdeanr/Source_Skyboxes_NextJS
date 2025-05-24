@@ -28,18 +28,7 @@ export default function MapList({ maps }: { maps?: MapLink[] }) {
               <span className="text-sm text-neutral-100">{m.name}</span>
 
               {/* external-link arrow */}
-              <svg
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-                className="
-                  w-4 h-4 shrink-0
-                  fill-neutral-400 group-hover:fill-neutral-200
-                  transition
-                "
-              >
-                <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3Z" />
-                <path d="M5 5h5V3H3v7h2V5Zm14 14h-5v2h7v-7h-2v5ZM5 19v-5H3v7h7v-2H5Z" />
-              </svg>
+              <img src="/Source_Skyboxes_NextJS/icons/maximize.svg" alt="" className="invert w-4 h-4" />
             </a>
           </li>
         ))}

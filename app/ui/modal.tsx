@@ -5,7 +5,7 @@ import Meta from './meta';
 import SunParams from './sunparameters';
 import FogParams from './fogparameters';
 import MapList   from './maplist';
-import DownloadButton from './downloadbutton';
+import ViewDetailsButton from './view-details-button';
 
 type MapLink = { name: string; url: string };
 type Meta = {
@@ -78,12 +78,10 @@ export default function Modal({ slug, onClose }: { slug: string; onClose: () => 
                 )}
               </div>
 
-              {/* Download (never shrink) */}
-              <DownloadButton
-                href={`/Source_Skyboxes_NextJS/skyboxes/${slug}/downloads/${slug}.7z`}
-                download
-                size={meta?.fileSize}
-                className="flex-shrink-0"   /* ⬅️ keeps the button’s width          */
+              {/* View Details (never shrink) */}
+              <ViewDetailsButton
+                href={`/skybox/${slug}`}
+                className="w-full sm:w-auto"
               />
             </div>
 

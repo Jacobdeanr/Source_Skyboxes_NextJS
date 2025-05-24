@@ -90,8 +90,15 @@ export default function MoreMenu({ profileLinks, sort, setSort, query, setQuery 
               <input
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') {
+                    setOpen(false);
+                    (e.target as HTMLInputElement).blur();
+                  }
+                }}
                 placeholder="Search…"
                 className="w-full rounded-md bg-neutral-800 px-3 py-1.5 text-sm placeholder:text-neutral-500 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                enterKeyHint="search"
               />
             </div>
 

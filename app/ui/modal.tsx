@@ -99,7 +99,7 @@ export default function Modal({ slug, onClose }: { slug: string; onClose: () => 
           </div>
           
           {/* Quick Actions */}
-          <div className="flex items-stretch gap-3 mb-6 h-10">
+          <div className="flex items-stretch gap-3 h-10">
             <ViewDetailsButton
               href={`/skyboxes/${slug}`}
               className="flex-1 flex items-center justify-center"
@@ -120,7 +120,7 @@ export default function Modal({ slug, onClose }: { slug: string; onClose: () => 
               isExpanded ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
             }`}
           >
-            <div className="pt-4 border-t border-neutral-800 space-y-6">
+            <div className="pt-4 space-y-6">
               {/* File Info */}
               {meta?.fileSize && (
                 <div className="text-sm">

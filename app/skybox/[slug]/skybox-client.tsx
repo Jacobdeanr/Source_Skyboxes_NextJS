@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import SunParams from '@/app/ui/sunparameters';
 import FogParams from '@/app/ui/fogparameters';
 import MapList from '@/app/ui/maplist';
@@ -24,10 +25,17 @@ export default function SkyboxClient({ slug, skyboxData, previewCount }: SkyboxC
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Header with Back Button */}
       <div className="mb-8">
-        <button onClick={() => window.history.back()} className="inline-flex items-center text-neutral-400 hover:text-white transition-colors mb-6">
-          <img src="/Source_Skyboxes_NextJS/icons/back.svg" alt="" className="invert w-5 h-5 mr-2" />
+        <Link 
+          href="/" 
+          className="inline-flex items-center text-neutral-400 hover:text-white transition-colors mb-6"
+        >
+          <img 
+            src="/Source_Skyboxes_NextJS/icons/back.svg" 
+            alt="" 
+            className="invert w-5 h-5 mr-2" 
+          />
           Back to all skyboxes
-        </button>
+        </Link>
         
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>

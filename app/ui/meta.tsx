@@ -3,7 +3,6 @@ import { ParamSection, ParamRow } from './parametersections';
 type Props = {
     author?: string;
     publishDate?: string;
-    categories?: string[];
     timeOfDay?: string;
     weatherCondition?: string;
     description?: string;
@@ -12,7 +11,6 @@ type Props = {
   export default function Meta({
     author,
     publishDate,
-    categories,
     timeOfDay,
     weatherCondition,
     description,
@@ -32,11 +30,6 @@ type Props = {
               {publishDate}
             </ParamRow>
           )}
-          {/*categories?.length && (
-            <ParamRow label="Categories">
-              {categories.join(', ')}
-            </ParamRow>
-          )*/}
         </ParamSection>
       </>
     );

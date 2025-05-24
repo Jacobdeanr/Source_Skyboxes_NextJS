@@ -19,22 +19,27 @@ export default function IconLink({ href, label, svg, menuMode = false }: IconLin
       className={`
         ${menuMode 
           ? 'flex items-center gap-3 w-full px-3 py-2 text-sm text-neutral-200 hover:bg-neutral-800' 
-          : 'flex-none w-8 h-8 flex items-center justify-center p-2 rounded-md bg-neutral-800/70 hover:bg-neutral-800'
+          : 'inline-flex items-center justify-center w-10 h-10 p-2 rounded-lg bg-neutral-800/50 hover:bg-neutral-800/70 border border-neutral-700/50 transition-colors'
         }
-        focus:outline-none focus:ring-2 focus:ring-amber-500 transition-colors
+        focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent
       `}
     >
-      <div className="flex items-center justify-center">
+      <div className="relative w-full h-full flex items-center justify-center">
         <Image 
           src={svg} 
           alt="" 
-          width={24} 
-          height={24} 
-          className="object-contain max-w-full max-h-full" 
+          width={20}
+          height={20}
+          className="object-contain w-full h-full"
+          style={{
+            maxWidth: '100%',
+            maxHeight: '100%',
+            aspectRatio: '1/1'
+          }}
         />
       </div>
       {/* Show label only in menu mode */}
-      {menuMode && <span className="flex-grow">{label}</span>}
+      {menuMode && <span className="flex-grow ml-2">{label}</span>}
     </a>
   );
 }

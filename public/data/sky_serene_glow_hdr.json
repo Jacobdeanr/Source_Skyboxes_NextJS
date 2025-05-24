@@ -3,11 +3,8 @@
   "description": "",
   "publishDate": "2024-08-07",
   "license": "CC BY 4.0",
-  "categories": [
-    "Misc"
-  ],
-  "timeOfDay": "Unknown",
-  "weatherCondition": "Unknown",
+  "timeOfDay": "Afternoon",
+  "weatherCondition": "Cloudy",
   "sunParameters": {
     "sunAngle": "0 128 0",
     "pitch": "-44",

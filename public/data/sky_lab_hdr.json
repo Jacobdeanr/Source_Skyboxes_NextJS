@@ -3,11 +3,6 @@
   "description": "",
   "publishDate": "2022-08-02",
   "license": "CC BY 4.0",
-  "categories": [
-    "Misc"
-  ],
-  "timeOfDay": "Unknown",
-  "weatherCondition": "Unknown",
   "sunParameters": {
     "sunAngle": "0 61.5 0",
     "pitch": "-17",

@@ -3,11 +3,6 @@
   "description": "",
   "publishDate": "2024-07-24",
   "license": "CC BY 4.0",
-  "categories": [
-    "Misc"
-  ],
-  "timeOfDay": "Unknown",
-  "weatherCondition": "Unknown",
   "sunParameters": {
     "sunAngle": "0 210 0",
     "pitch": "-40",

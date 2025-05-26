@@ -53,7 +53,7 @@ export default function SkyboxClient({ slug, skyboxData, previewCount }: SkyboxC
                 <p className="text-sm text-neutral-400">
                   License:{' '}
                   <a 
-                    href={`https://creativecommons.org/licenses/${skyboxData.license.toLowerCase().replace(' ', '-')}/`}
+                    href={`https://creativecommons.org/licenses/by/4.0/deed.en`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-400 hover:underline"

@@ -1,12 +1,8 @@
 {
   "author": "Jacob Robbins",
-  "description": "In 2025, I decided to update the original sky_night003 to a higher quality version, with proper HDR support.",
+  "description": "In 2025, I decided to update the original sky_night003 to a higher quality version, with proper HDR support. This was especially challenging considering the original files were no longer available. While not an exact recreation, I hope you will find it useful for your projects!",
   "publishDate": "2025-05-26",
   "license": "CC BY 4.0",
-  "categories": [
-    "Night",
-    "Clear"
-  ],
   "timeOfDay": "Night",
   "weatherCondition": "Clear",
   "sunParameters": {

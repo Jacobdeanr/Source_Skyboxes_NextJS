@@ -132,7 +132,7 @@ export default function SkyboxClient({ slug, skyboxData, previewCount }: SkyboxC
           </div>
           */}
 
-          {/* Technical Details */}
+          {/* Technical Details 
           <div className="bg-neutral-900/50 backdrop-blur-sm rounded-xl p-6 border border-neutral-800">
             <h2 className="text-xl font-semibold text-white mb-4">Technical Details</h2>
             <div className="grid grid-cols-2 gap-4">
@@ -154,6 +154,7 @@ export default function SkyboxClient({ slug, skyboxData, previewCount }: SkyboxC
               </div>
             </div>
           </div>
+          */}
 
           {/* Sun Parameters */}
           {skyboxData.sunParameters && (

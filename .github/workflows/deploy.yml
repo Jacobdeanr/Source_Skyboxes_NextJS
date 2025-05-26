@@ -76,6 +76,9 @@ jobs:
       - name: Generate index.json
         run: node scripts/generate-index.js
 
+      - name: Generate skybox manifest
+        run: node scripts/generate-skybox-manifest.js
+
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
 

@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://jacobdeanr.github.io/Source_Skyboxes/sitemap.xml
+Sitemap: https://sourceskyboxes.com/sitemap.xml

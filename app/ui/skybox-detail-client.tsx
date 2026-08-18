@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 
-import { withBase } from '@/app/lib/basepath';
+import { withBase, downloadHref } from '@/app/lib/basepath';
 import { formatDate } from '@/app/lib/date-utils';
 import { getHumanTitle, getOrderedVisibleSlugs, type QuickFilter } from '@/app/lib/catalog';
 import type { SkyboxDownload, SkyboxIndex, SkyboxMeta } from '@/app/types/skybox';
@@ -242,12 +242,12 @@ export default function SkyboxDetailClient({
                 <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[color:var(--foreground-muted)]">
                   Download files
                 </p>
-                {Object.values(downloads).map((download, index) => {
+                {Object.entries(downloads).map(([kind, download], index) => {
                   const isPrimary = index === 0;
                   return (
                     <a
                       key={download.file}
-                      href={`https://github.com/Jacobdeanr${withBase(`/releases/download/assets/${download.file}`)}`}
+                      href={downloadHref(kind, download.file)}
                       className={`flex w-full items-center justify-between border px-4 py-3 text-sm transition-colors ${
                         isPrimary
                           ? 'border-white bg-white !text-black hover:bg-[#e5e5e5] hover:!text-black'

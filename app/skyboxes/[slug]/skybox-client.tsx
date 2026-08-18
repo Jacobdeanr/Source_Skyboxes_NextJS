@@ -1,5 +1,5 @@
 'use client';
-import { withBase } from '@/app/lib/basepath';
+import { withBase, downloadHref } from '@/app/lib/basepath';
 import { formatDate } from '@/app/lib/date-utils';
 
 import { useState } from 'react';
@@ -81,17 +81,10 @@ export default function SkyboxClient({ slug, skyboxData, previewCount }: SkyboxC
             </div>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-
-            {/* Source engine download
-            
-            https://github.com/Jacobdeanr/Source_Skyboxes_NextJS/releases/download/assets/sky_cloudy005.tgd 
-            
-
-            */}
-            {Object.values(downloads).map((d) => (
+            {Object.entries(downloads).map(([kind, d]) => (
               <DownloadButton
                 key={d.file}
-                href={`https://github.com/Jacobdeanr${withBase(`/releases/download/assets/${d.file}`)}`}
+                href={downloadHref(kind, d.file)}
                 format={d.format}
                 size={d.size}
                 className="flex-1 sm:flex-none"

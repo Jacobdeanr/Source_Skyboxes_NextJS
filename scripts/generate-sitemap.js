@@ -1,7 +1,7 @@
 const fs   = require('fs');
 const path = require('path');
 
-const BASE = 'https://jacobdeanr.github.io/Source_Skyboxes';
+const BASE = process.env.NEXT_PUBLIC_SITE_URL || 'https://sourceskyboxes.com';
 const ROOT = process.cwd();
 
 const indexPath = path.join(ROOT, 'public', 'data', 'index.json');

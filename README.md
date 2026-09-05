@@ -16,7 +16,7 @@ This repository contains a comprehensive collection of skyboxes categorized by d
 
 To use the skyboxes from this repository:
 
-1. Browse the available categories on [Source Skyboxes](www.sourceskyboxes.com).
+1. Browse the available categories on [Source Skyboxes](https://sourceskyboxes.com).
 2. Select and download the skybox that suits your project.
 
 ## Contributions
